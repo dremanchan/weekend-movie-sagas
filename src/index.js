@@ -30,7 +30,7 @@ function* fetchAllMovies() {
 }
 
 // Takes user to the targeted movie's detail page
-function fetchDetails(action) {
+function* fetchDetails(action) {
     try {
         const detailPage = yield axios.get('/api/movie/details', {params: action.payload});
         yield put({ type: 'SET_DETAILS', payload: detailPage.data });

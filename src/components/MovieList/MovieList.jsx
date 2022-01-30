@@ -27,6 +27,7 @@ function MovieList() {
                         <div key={movie.id} >
                             <h3>{movie.title}</h3>
                             <img src={movie.poster} alt={movie.title}/>
+                            <img id={movie.id} onClick={(event) => fetchDetails(event.target.id)} src={movie.poster} alt={movie.title}/>
                         </div>
                     );
                 })}
