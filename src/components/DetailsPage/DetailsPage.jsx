@@ -7,8 +7,6 @@ function DetailsPage() {
         console.log('details are', details);
     return (
         <>
-            <h1>Movie Details</h1>
-            
             <Container className="detailContainer" maxWidth="md">
                 <h1 className="detailHeader">Movie Details</h1>
                 <h2>{details.movieTitle}</h2>
