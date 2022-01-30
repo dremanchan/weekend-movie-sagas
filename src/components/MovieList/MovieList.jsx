@@ -11,6 +11,13 @@ function MovieList() {
         dispatch({ type: 'FETCH_MOVIES' });
     }, []);
 
+    const fetchDetails = (movieId) => {
+        dispatch({
+            type: 'FETCH_DETAILS',
+            payload: movieId,
+        });
+    };
+
     return (
         <main>
             <h1>MovieList</h1>
@@ -20,6 +27,7 @@ function MovieList() {
                         <div key={movie.id} >
                             <h3>{movie.title}</h3>
                             <img src={movie.poster} alt={movie.title}/>
+                            <img id={movie.id} onClick={(event) => fetchDetails(event.target.id)} src={movie.poster} alt={movie.title}/>
                         </div>
                     );
                 })}
