@@ -11,6 +11,13 @@ function MovieList() {
         dispatch({ type: 'FETCH_MOVIES' });
     }, []);
 
+    const fetchDetails = (movieId) => {
+        dispatch({
+            type: 'FETCH_DETAILS',
+            payload: movieId,
+        });
+    };
+
     return (
         <main>
             <h1>MovieList</h1>
