@@ -66,7 +66,7 @@ const genres = (state = [], action) => {
 
 // Used to store movie details
 
-const details = (state = {}, action) => {
+const details = (state = {genres: []}, action) => {
     switch (action.type) {
         case 'SET_DETAILS':
             return action.payload;
